@@ -9,7 +9,7 @@ const MINIMUM_MOVE_DISTANCE = 5
 signal facing_new_direction # we're facing a new direction as a result of clicking
 signal reached_destination # stop moving please and thanks
 
-export var speed = 0
+export var speed = 1000
 
 var destination = null # Vector2
 

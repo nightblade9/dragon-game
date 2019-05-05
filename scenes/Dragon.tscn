@@ -6,16 +6,20 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 64.0
 
-[node name="Sprite" type="KinematicBody2D"]
+[node name="KinetmaticBody" type="KinematicBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
 
-[node name="ClickComponent" type="Node2D" parent="."]
-script = ExtResource( 2 )
-speed = 1000
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 64, 64 )
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 4, 4 )
+smoothing_enabled = true
+
+[node name="ClickComponent" type="Node2D" parent="."]
+script = ExtResource( 2 )
